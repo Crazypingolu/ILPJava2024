@@ -1,16 +1,16 @@
 // Classe Abstrata
 class Estatistica {
-    int codigoDaCidade;
-    String nomeDaCidade;
-    int quantidadeDeAcidentes;
-// Método construtor
+    int codigoCidade;
+    String nomeCidade;
+    int quantidadeAcidentes;
+// Método construtor vazio
     Estatistica(){
         this(0,"",0);
     }
 // Metodo Procedimento
-    Estatistica(int codigo, String nome, int Qtd){
-        codigoDaCidade = codigo;
-        nomeDaCidade = nome;
-        quantidadeDeAcidentes = Qtd;
+    Estatistica(int cod, String nom, int qtd){
+        codigoCidade = cod;
+        nomeCidade = nom;
+        quantidadeAcidentes = qtd;
     }
 }

@@ -18,18 +18,19 @@ public class Principal {
                 switch (loopEntrada) {
                     case 1:
                         // Executa a função de registro 
-                        metodos.funcRegis(cid);
+                        metodos.adicionarRegistro(cid);
                         break;
                     case 2:
                         // Executa o procedimento para verificar a quantidade de acidentes entre 100 e 500
-                        metodos.qtdAcidentes(cid);
+                        metodos.verificarIntervalo(cid);
                         break;
                     case 3:
                         // Executa o procedimento para verificar a quantidade de acidentes entre 100 e 500
-                        metodos.maimen(cid);
+                        metodos.maiorEMenor(cid);
                         break;
                     case 4:
-                        metodos.maMedia(cid);
+                        // Executa o procedimento para mostrar quais cidades estão acicma da média de acidentes
+                        metodos.maiorQueMedia(cid);
                         break;
                     case 9:
                         break;
