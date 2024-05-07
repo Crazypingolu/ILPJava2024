@@ -17,10 +17,19 @@ public class Principal {
                 "MENU ESTATÍSTICA\n[1] - Cadastro de estatística.\n[2] - Consulta por quantidade de acidente.\n[3] - Consulta por estatística de acidente.\n[4] - Acidentes acima da média.\n[9] - Finalizar programa."));
                 switch (loopEntrada) {
                     case 1:
+                        // Executa a função de registro 
                         metodos.funcRegis(cid);
                         break;
                     case 2:
+                        // Executa o procedimento para verificar a quantidade de acidentes entre 100 e 500
                         metodos.qtdAcidentes(cid);
+                        break;
+                    case 3:
+                        // Executa o procedimento para verificar a quantidade de acidentes entre 100 e 500
+                        metodos.maimen(cid);
+                        break;
+                    case 4:
+                        metodos.maMedia(cid);
                         break;
                     case 9:
                         break;
