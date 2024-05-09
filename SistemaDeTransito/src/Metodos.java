@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 public class Metodos {
     public Estatistica[] adicionarRegistro(Estatistica[] cidade){
+        // criar um registro baseado na classe Estatisticas.
         for(int i = 0; i < cidade.length;i++){
             cidade[i].codigoCidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o código da " + (i+1) + "º cidade: "));
             cidade[i].nomeCidade = JOptionPane.showInputDialog("Digite o nome da " + (i+1) + "º cidade: ");
@@ -10,30 +11,32 @@ public class Metodos {
     }
 
     public void verificarIntervalo(Estatistica[] cidade){
-        int cidcont = 0;
+        int cidcont = 0; // contador de cidades que aparecem no intervalo.
         System.out.println("Cidades entre 100 e 500 acidentes: ");
         for(int c = 0; c < cidade.length; c++){
             if(cidade[c].quantidadeAcidentes > 100 && cidade[c].quantidadeAcidentes < 500){
+                // mostra nome e código da cidade no intervalo
                 System.out.println("\nNome: "+ cidade[c].nomeCidade + "\nCódigo: " + cidade[c].codigoCidade);
                 cidcont += 1;
             }
         }
-        if(cidcont == 0){
+        if(cidcont == 0){ // caso nenhuma cidade apareça:
             System.out.println("Nenhuma cidade está entre 100 e 500 acidentes.");
         }
         System.out.println("...");
     }
 
     public void maiorEMenor(Estatistica[] cidade){
+        // definir variáveis:
         int maior = -1, menor = -1;
         int maiorci = -1, menorci = -1;
         for(int cto = 0; cto < cidade.length; cto++){
-            if(maior == -1){
+            if(maior == -1){ // se for a primeira entrada:
                 maior = cidade[cto].quantidadeAcidentes;
                 maiorci = cto;
                 menor = cidade[cto].quantidadeAcidentes;
                 menorci = cto;
-            } else {
+            } else { // proximas entradas
                 if(cidade[cto].quantidadeAcidentes > maior){
                     maior = cidade[cto].quantidadeAcidentes;
                     maiorci = cto;

@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 public class Principal {
     public static void main(String[] args) {
         // Estancia de classe em # registros de vetor:
-        Estatistica[] cid = new Estatistica[3];
+        Estatistica[] cid = new Estatistica[10];
         // Estanciar os métodos (função/procedimentos):
         Metodos metodos = new Metodos();
         // Executar o construtor:
@@ -33,6 +33,7 @@ public class Principal {
                         metodos.maiorQueMedia(cid);
                         break;
                     case 9:
+                    // saída
                         break;
                     default:
                         JOptionPane.showMessageDialog(null,"Opção inválida");
