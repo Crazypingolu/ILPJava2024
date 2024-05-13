@@ -1,23 +1,22 @@
-package listadeexerciciosderecursiva;
 /*
  * Programa: calcular a sequencia: n! + (n-1)! + ... + (1)!; usando recursiva
  * Programador: LucasPOliveira
- * versão: 2.0
+ * versï¿½o: 2.0
 */
 // trazer biblioteca:
 import javax.swing.JOptionPane;
 public class Ex05RecursivaDesafio {
-	// código principal:
+	// cï¿½digo principal:
 	public static void main(String[] args) {
-		// criar/definir variáveis:
+		// criar/definir variï¿½veis:
 		int num;
 		// entrada de dados:
-		num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número: "));
-		// saída de dados:
+		num = Integer.parseInt(JOptionPane.showInputDialog("Digite um nï¿½mero: "));
+		// saï¿½da de dados:
 		JOptionPane.showMessageDialog(null, "Soma de todos os fatoriais: " + somaFat(num));
 	}
 	static int somaFat(int n) {
-		// criar/definir variável:
+		// criar/definir variï¿½vel:
 		int total;
 		// processamento de dados:
 		if(n == 1) {
@@ -28,7 +27,7 @@ public class Ex05RecursivaDesafio {
 		}
 	}
 	static int Fat(int x) {
-		// criar variável:
+		// criar variï¿½vel:
 		int fatTotal;
 		// processamento:
 		if(x == 1) {

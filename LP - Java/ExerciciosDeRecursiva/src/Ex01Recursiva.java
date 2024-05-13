@@ -1,7 +1,4 @@
-package listadeexerciciosderecursiva;
-
-/*
- * Programa: calcular a soma dos n�meros de 1 a 100, usando recursiva
+/* Programa: calcular a soma dos n�meros de 1 a 100, usando recursiva
  * Programador: LucasPOliveira
  * vers�o: 2.0
 */
@@ -11,7 +8,7 @@ public class Ex01Recursiva {
 		// Criar/definir vari�veis Vari�veis:
 		int num = 1;
 		// sa�da de dados:
-		System.out.println("Soma dos n�meros: " + soma100(num)); // sa�da com chamada de fun��o.
+		System.out.println("\nSoma dos números: " + soma100(num)); // sa�da com chamada de fun��o.
 	}
 
 	// programa fun��o "soma100()":

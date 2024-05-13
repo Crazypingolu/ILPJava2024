@@ -1,27 +1,25 @@
-package listadeexerciciosderecursiva;
-/*
- * Programa: calcular a sequencia: n + (n-1) + ... + (1); usando recursiva
+/* Programa: calcular a sequencia: n + (n-1) + ... + (1); usando recursiva
  * Programador: LucasPOliveira
- * versão: 2.0
+ * versï¿½o: 2.0
 */
 // trazer biblioteca:
 import javax.swing.JOptionPane;
 public class Ex02Recursiva {
-	// Código: princial
+	// Cï¿½digo: princial
 	public static void main(String[] args) {
-		// criar/definir variáveis:
+		// criar/definir variï¿½veis:
 		int num;
 		// entrada de dados:
 		num = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de num: "));
-		// saída + função:
-		JOptionPane.showMessageDialog(null, "A soma de 1 até num é: " + de1ParaN(num));
+		// saï¿½da + funï¿½ï¿½o:
+		JOptionPane.showMessageDialog(null, "A soma de 1 atÃ© num Ã©: " + de1ParaN(num));
 	}
-	// código: função recursiva
+	// cï¿½digo: funï¿½ï¿½o recursiva
 	static int de1ParaN(int n) {
-		// criar/ definir variáveis:
+		// criar/ definir variï¿½veis:
 		int total;
 		// processamento de dados:
-		// condição de saída:
+		// condiï¿½ï¿½o de saï¿½da:
 		if(n == 1) {
 			// retorna valor 01:
 			return 1;
