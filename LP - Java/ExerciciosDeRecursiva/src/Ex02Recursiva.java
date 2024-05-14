@@ -1,25 +1,25 @@
 /* Programa: calcular a sequencia: n + (n-1) + ... + (1); usando recursiva
  * Programador:  LucasP, Crazypingolu
- * vers�o: 2.0
+ * versão: 2.0
 */
 // trazer biblioteca:
 import javax.swing.JOptionPane;
 public class Ex02Recursiva {
-	// C�digo: princial
+	// Código: princial
 	public static void main(String[] args) {
-		// criar/definir vari�veis:
+		// criar/definir variáveis:
 		int num;
 		// entrada de dados:
 		num = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor de num: "));
-		// sa�da + fun��o:
+		// saída + função:
 		JOptionPane.showMessageDialog(null, "A soma de 1 até num é: " + de1ParaN(num));
 	}
-	// c�digo: fun��o recursiva
+	// código: função recursiva
 	static int de1ParaN(int n) {
-		// criar/ definir vari�veis:
+		// criar/ definir variáveis:
 		int total;
 		// processamento de dados:
-		// condi��o de sa�da:
+		// condição de saída:
 		if(n == 1) {
 			// retorna valor 01:
 			return 1;
