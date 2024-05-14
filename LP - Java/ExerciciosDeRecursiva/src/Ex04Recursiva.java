@@ -1,12 +1,12 @@
 /*
  * Programa: calcular a sequencia: n/1 + (n-1)/2 + ... + (1/n); usando recursiva
- * Programador: LucasPOliveira
- * vers�o: 2.0
+ * Programador:  LucasP, Crazypingolu
+ * versão: 2.0
 */
 //trazer biblioteca:
 import javax.swing.JOptionPane;
 public class Ex04Recursiva {
-	// c�digo principal:
+	// código principal:
 	public static void main(String[] args) {
 		// criar/definir vari�veis:
 		float num1, num2 = 1;

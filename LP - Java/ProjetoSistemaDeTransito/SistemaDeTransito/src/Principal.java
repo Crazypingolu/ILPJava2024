@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class Principal {
     public static void main(String[] args) throws IOException { // throws *** é por conta do registro em txt, ----[NÃO ESQUECER]----
         // Estancia de classe em # registros de vetor:
-        Estatistica[] cid = new Estatistica[2];
+        Estatistica[] cid = new Estatistica[10];
         // Estanciar os métodos (função/procedimentos):
         Metodos metodos = new Metodos();
         // Executar o construtor:

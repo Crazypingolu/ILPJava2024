@@ -1,6 +1,6 @@
 /*
  * Programa: calcular a sequencia: n! + (n-1)! + ... + (1)!; usando recursiva
- * Programador: LucasPOliveira
+ * Programador: LucasP, Crazypingolu
  * vers�o: 2.0
 */
 // trazer biblioteca:

@@ -1,6 +1,6 @@
 /*
  * Programa: calcular a sequencia: 1/1 + 1/2 + ... + 1/n ; usando recursiva
- * Programador: LucasPOliveira
+ * Programador:  LucasP, Crazypingolu
  * vers�o: 2.0
 */
 // trazer biblioteca:

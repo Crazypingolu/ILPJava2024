@@ -1,27 +1,27 @@
-/* Programa: calcular a soma dos n�meros de 1 a 100, usando recursiva
- * Programador: LucasPOliveira
- * vers�o: 2.0
+/* Programa: calcular a soma dos números de 1 a 100, usando recursiva
+ * Programador: LucasP, Crazypingolu
+ * versão: 2.0
 */
 public class Ex01Recursiva {
 	// Programa principal:
 	public static void main(String[] args) {
-		// Criar/definir vari�veis Vari�veis:
+		// Criar/definir variáveis:
 		int num = 1;
-		// sa�da de dados:
-		System.out.println("\nSoma dos números: " + soma100(num)); // sa�da com chamada de fun��o.
+		// saída de dados:
+		System.out.println("\nSoma dos números: " + soma100(num)); // saída com chamada de função.
 	}
 
-	// programa fun��o "soma100()":
+	// programa função "soma100()":
 	static int soma100(int n) {
-		// criar/definir vari�vel:
+		// criar/definir variável:
 		int total;
 		// processamento de dados
 		if (n < 100) {
 			total = n + soma100(n + 1);
-			// sa�da 01:
+			// saída 01:
 			return total;
 		} else {
-			// sa�da 02:
+			// saída 02:
 			return 100;
 		}
 	}
