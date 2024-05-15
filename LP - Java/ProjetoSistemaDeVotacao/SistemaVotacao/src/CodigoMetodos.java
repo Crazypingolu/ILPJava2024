@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Random;
 import javax.swing.JOptionPane;
+
 public class CodigoMetodos {
     public Votacao[] carregaSecao(Votacao[] voto){ // gerar a seção e o voto do candidato
         Random numAleatorio = new Random();
@@ -18,8 +19,8 @@ public class CodigoMetodos {
     }
     // Gravar/Ler registro:
     public int[][] consultarRegistro(int[][] registro) throws IOException{
-        String registroFisico = "Registro_Votacao.txt";
-        BufferedWriter ler = new BufferedWriter(new FileWriter(registroFisico));
+        //String registroFisico = "Registro_Votacao.txt";
+        //BufferedWriter ler = new BufferedWriter(new FileWriter(registroFisico));
         
         return registro;
     }
