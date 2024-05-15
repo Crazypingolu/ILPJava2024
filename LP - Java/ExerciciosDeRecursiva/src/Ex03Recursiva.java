@@ -1,26 +1,26 @@
 /*
- * Programa: calcular a sequencia: 1/1 + 1/2 + ... + 1/n ; usando recursiva
+ * Programa: calcular a sequência: 1/1 + 1/2 + ... + 1/n ; usando recursiva
  * Programador:  LucasP, Crazypingolu
- * vers�o: 2.0
+ * versão: 2.0
 */
 // trazer biblioteca:
 import javax.swing.JOptionPane;
 public class Ex03Recursiva {
-	// c�digo principal:
+	// código principal:
 	public static void main(String[] args) {
-		// criar/deifinir vari�veis:
+		// criar/deifinir variáveis:
 		float num;
 		// entrada de dados:
 		num = Float.parseFloat(JOptionPane.showInputDialog("Digite num: "));
-		// sa�da de dados:
-		JOptionPane.showMessageDialog(null, "A soma da sequ�ncia 1/1 + 1/2 + ... + 1/n �: " + umSobreN(num));
+		// saída de dados:
+		JOptionPane.showMessageDialog(null, "A soma da sequência 1/1 + 1/2 + ... + 1/n é: " + umSobreN(num));
 	}
-	// c�digo da fun��o recursiva:
+	// código da função recursiva:
 	static float umSobreN(float n) {
-		// definir vari�veis:
+		// definir variáveis:
 		float total;
 		// processamento de dados:
-		// condi��o de sa�da:
+		// condição de saída:
 		if (n == 1) {
 			return 1;
 		} else {
