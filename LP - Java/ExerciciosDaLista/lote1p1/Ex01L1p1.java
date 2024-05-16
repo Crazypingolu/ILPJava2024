@@ -6,12 +6,12 @@
 import javax.swing.JOptionPane;
 public class Ex01L1p1 {
     public static void main(String[] args) {
-        // variáveis
+        // Declarar variáveis:
         int lado, total;
-        // entrada
+        // Entrada de dados:
         lado = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do lado: "));
         total = lado*lado;
-        // saída
+        // Saída de dados:
         JOptionPane.showMessageDialog(null, "Total: " + total);
     }
 }
