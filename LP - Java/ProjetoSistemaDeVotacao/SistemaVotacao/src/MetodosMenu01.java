@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
-public class CodigoMetodos {
+public class MetodosMenu01 {
     public Votacao[] carregaSecao(Votacao[] voto){ // gerar a seção e o voto do candidato
         Random numAleatorio = new Random();
         for(int i = 0; i < voto.length; i++){
@@ -20,7 +20,7 @@ public class CodigoMetodos {
             registro[c][1] = votos[c].numeroCandidato;   
         }
         JOptionPane.showMessageDialog(null,
-        "Classificação concluída.");
+        "Dados Classificados.");
         return registro;
     }
     // Gravar/Ler registro:
@@ -58,12 +58,13 @@ public class CodigoMetodos {
             }
         }
         escrever.close();
-        JOptionPane.showMessageDialog(null, "Gravação concluída.");
+        JOptionPane.showMessageDialog(
+            null, "Gravação concluída.");
     }
     // Ler o registro .txt:
     static void registroLer(Votacao[] voto, int[][] reg) throws IOException{
-        String registroFisico = "Registro_Votacao.txt";
-        BufferedReader ler = new BufferedReader(new FileReader(registroFisico));
+        String registroFisico = "Registro_Votacao.txt"; // seleciona o arquivo a ser lido
+        BufferedReader ler = new BufferedReader(new FileReader(registroFisico)); // criar o leitor do txt;
         for(int i = 0 ; i < reg.length ; i++){ // linha
             for(int j = 0 ; j < reg[0].length ; j++){ // coluna
                 if (i == 0 || j == 0){ // condicional pra gravar a 1º linha (não sei pq precisa mas só funcionou desse jeito)
@@ -75,5 +76,8 @@ public class CodigoMetodos {
             voto[i].numeroCandidato = reg[i][1];
         }
         ler.close(); 
+        JOptionPane.showMessageDialog(
+            null, "Leitura concluída.");
     }
+    
 }

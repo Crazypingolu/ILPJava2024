@@ -2,11 +2,11 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 public class CodigoPrincipal {
     public static void main(String[] args) throws IOException{
-        // variável global:
-        int[][] registroVotacao = new int[200][2];
+        // Matriz:
+        int[][] registroVotacao = new int[20][2];
         // Instancia de Classe:
         Votacao[] voto = new Votacao[200]; // Classe Votação
-        CodigoMetodos metodo = new CodigoMetodos(); // Metodos
+        MetodosMenu01 metodoMenu = new MetodosMenu01(); // Metodos 01 - gerar, armazenar, gravar e ler
         // Executar o constutor:
         for (int c = 0; c < voto.length; c++ ) {
             voto[c] = new Votacao();            
@@ -24,17 +24,17 @@ public class CodigoPrincipal {
                 "\n[9] - Finalizar Programa."));
             switch (loopMenuVotacao) {
                 case 1: // Carregar votos e número da seção
-                    metodo.carregaSecao(voto);
+                    metodoMenu.carregaSecao(voto);
                     break;
                 case 2: // Guardar os registros em 1 matriz:
-                    metodo.classificaregistro(voto, registroVotacao);
+                    metodoMenu.classificaregistro(voto, registroVotacao);
                     break;
                 case 3: // Gravar/Ler dados
-                    metodo.registro(voto, registroVotacao);
+                    metodoMenu.registro(voto, registroVotacao);
                     break;
                 case 4:
                     // Mostrar menu estatísticas:
-                    menuIndicadores();
+                    menuIndicadores(voto);
                     break;
                 case 9:
                     JOptionPane.showMessageDialog(null, "Finalizando Programa.");
@@ -46,7 +46,9 @@ public class CodigoPrincipal {
             }
         }
     }
-    static void menuIndicadores() throws IOException{
+    static void menuIndicadores(Votacao[] voto){
+        // instancia de classe metodo estatística:
+        MetodosEstatisticas metodoEst = new MetodosEstatisticas(); // Metodos 02
         // definir variáveis:
         int loopMenuIndicadores = 0;
         // loop 2º menu (indicadores):
@@ -60,12 +62,16 @@ public class CodigoPrincipal {
                 "\n[9] - Voltar ao menu principal."));
             switch (loopMenuIndicadores) {
                 case 1:
+                    metodoEst.eleitorPSecao(voto);
                     break;
                 case 2:
+                    metodoEst.maiorMenorEleitores(voto);
                     break;
                 case 3:
+                    metodoEst.votoCandidato(voto);
                     break;
                 case 4:
+                    metodoEst.top10(voto);
                     break;
                 case 9:
                     break;
