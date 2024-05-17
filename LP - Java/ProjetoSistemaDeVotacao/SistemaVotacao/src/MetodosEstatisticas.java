@@ -59,27 +59,33 @@ public class MetodosEstatisticas {
     public void top10(Votacao[] voto){
         // criar variáveis:
         int[] aux = new int[301];
-        int[] top = new int[10];
         int valorMaior = -1, indiceMa = 0;
-        // processamento
+        // processamento encher o auxiliar:
         for(int c = 0 ; c < voto.length ; c ++){
             aux[voto[c].numeroCandidato] +=1;
         }
-        for(int j = 0 ; j < top.length ; j++){
-            for(int i = 0 ; i < aux.length ; i ++){
-                if (valorMaior == -1) {
-                    valorMaior = aux[i];
-                    indiceMa = i;                
+        // calculo de maior e mostrar:
+        for(int i = 0 ; i < 10 ; i++){
+            for(int j = 0 ; j < aux.length ; j++){
+                if(valorMaior == -1){
+                    valorMaior = aux[j];
+                    indiceMa = j;
                 } else {
-                    if(aux[i] > valorMaior){
-                        valorMaior = aux[i];
-                        indiceMa = i;
+                    if(aux[j] > valorMaior){
+                        valorMaior = aux[j];
+                        indiceMa = j;
                     }
                 }
             }
-            top[j] = indiceMa;
+            if (i == 0) {
+                System.out.println("\nTOP COLOCADOS:");
+            }
+            System.out.println((i + 1) + "º Candidato: " + indiceMa + ", com " + aux[indiceMa] + " votos");
             aux[indiceMa] = 0;
+            valorMaior = -1;
         }
-        
+        JOptionPane.showMessageDialog(
+            null, "Consulta concluída."
+        );
     }
 }

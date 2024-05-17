@@ -26,19 +26,22 @@ public class MetodosMenu01 {
     // Gravar/Ler registro:
     public void registro(Votacao[] voto, int[][] registro) throws IOException{
         // Variável de controle:
-        int opc=0;
+        int opc = -1;
         // Entrada de valor:
-        while(opc != 1 && opc != 2){
+        while(opc != 1 && opc != 2 && opc != 0){
             opc = Integer.parseInt(JOptionPane.showInputDialog(
                 "ESCOLHA " +
                 "\n[1] - Gravar. " +
-                "\n[2] - Ler. " ));
+                "\n[2] - Ler. " +
+                "\n[0] - Cancelar"));
             switch (opc) {
                 case 1:
                     registroGravar(registro);
                     break;
                 case 2:
                     registroLer(voto, registro);
+                    break;
+                case 0:
                     break;
                 default:
                 JOptionPane.showMessageDialog(null,
