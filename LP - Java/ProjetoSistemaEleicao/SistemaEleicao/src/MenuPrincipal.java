@@ -41,8 +41,14 @@ public class MenuPrincipal {
                     metodosMP.CadastraEleitor(eleitores);
                 break;
                 case 2:
-                    CadastraVotacao(votacao01, votacao02);
+                    CadastraVotacao(votacao01, votacao02, eleitores);
                 break;
+                case 3:
+                    metodosMP.agrupar(votacao01, votacao02, apuracao);
+                break;
+                case 4:
+                break;
+
                 case 9:
                 break;
                 default:
@@ -52,7 +58,7 @@ public class MenuPrincipal {
         }
     }
     // Menu cadastra votos:
-    static void CadastraVotacao(Votacao[] votos01, Votacao[] votos02){
+    static void CadastraVotacao(Votacao[] votos01, Votacao[] votos02, Eleitor[] eleitor){
         // Classe MenuVotacao (como função):
         MetodosMenuVota metodosVT = new MetodosMenuVota();
         // DEFINIR VARIÁVEIS:
@@ -65,7 +71,10 @@ public class MenuPrincipal {
                 "\n[9] - Voltar ao menu principal."));
             switch (menuVota) {
                 case 1:
-                    metodosVT.CadastraVota01(votos01);
+                    metodosVT.CadastraVota01(votos01, eleitor);
+                break;
+                case 2:
+                    metodosVT.CadastraVota02(votos02, eleitor);
                 break;
                 case 9:
                 break;
