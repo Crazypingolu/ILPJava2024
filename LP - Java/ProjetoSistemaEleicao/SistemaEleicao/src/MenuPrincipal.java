@@ -30,7 +30,7 @@ public class MenuPrincipal {
         int menu = 0;// variável loop - menu principal
         while(menu != 9){
             menu = Integer.parseInt(JOptionPane.showInputDialog(
-                "MENU PRINCIPAL" +
+                "MENU PRINCIPAL:" +
                 "\n[1] - Cadastrar eleitor." +
                 "\n[2] - Cadastrar votação (1 e 2)." +
                 "\n[3] - Agrupar apuração." +
@@ -47,8 +47,8 @@ public class MenuPrincipal {
                     metodosMP.agrupar(votacao01, votacao02, apuracao);
                 break;
                 case 4:
+                    ConsultaEstatisticas(apuracao, eleitores);
                 break;
-
                 case 9:
                 break;
                 default:
@@ -59,16 +59,16 @@ public class MenuPrincipal {
     }
     // Menu cadastra votos:
     static void CadastraVotacao(Votacao[] votos01, Votacao[] votos02, Eleitor[] eleitor){
-        // Classe MenuVotacao (como função):
+        // metodos pro menu votação:
         MetodosMenuVota metodosVT = new MetodosMenuVota();
         // DEFINIR VARIÁVEIS:
         int menuVota = 0;
         while (menuVota != 9) {
             menuVota = Integer.parseInt(JOptionPane.showInputDialog(
-                "CADASTRO DE VOTAÇÕES" +
+                "CADASTRO DE VOTAÇÕES:" +
                 "\n[1] - Cadastrar Votação 01." +
                 "\n[2] - Cadastrar votação 02." +
-                "\n[9] - Voltar ao menu principal."));
+                "\n[9] - Voltar ao MENU PRINCIPAL."));
             switch (menuVota) {
                 case 1:
                     metodosVT.CadastraVota01(votos01, eleitor);
@@ -82,6 +82,50 @@ public class MenuPrincipal {
                     JOptionPane.showMessageDialog(null,"Opção inválida.");
                 break;
             }         
+        }
+    }
+    // Menu ConsultaEstatisticas:
+    static void ConsultaEstatisticas(Votacao[] votos, Eleitor[] eleitores){
+        // metodos pro consulta Estatisticas:
+        MetodosMenuConsu metodosCE = new MetodosMenuConsu();
+        // definir variáveis:
+        int menuConsulta = 0;
+        while(menuConsulta != 9){
+            menuConsulta = Integer.parseInt(JOptionPane.showInputDialog(
+               "MENU ESTATÍSTICA:" +
+               "\n[1] - Vencedor. " +
+               "\n[2] - Segundo colocado. " +
+               "\n[3] - Votos em branco. " +
+               "\n[4] - Votos nulos. " +
+               "\n[5] - Mostrar eleitores. " +
+               "\n[6] - Mostrar apuração. " +
+               "\n[9] - Voltar ao MENU PRINCIPAL. "
+            ));
+            switch (menuConsulta) {
+                case 1:
+                    metodosCE.vencedor(votos);
+                break;
+                case 2:
+                    metodosCE.segundoLugar(votos);
+                break;
+                case 3:
+                    metodosCE.votosEmBranco(votos);
+                break;
+                case 4:
+                    metodosCE.votosNulos(votos);
+                break;
+                case 5:
+                    metodosCE.mostraEleitores(eleitores);
+                break;
+                case 6:
+                    metodosCE.mostraApuracao(votos);
+                break;
+                case 9:
+                break;
+                default:
+                    JOptionPane.showMessageDialog(null,"Opção inválida.");
+                break;
+            }
         }
     }
 }
