@@ -32,7 +32,7 @@ public class Principal {
                         metodos.maiorEMenor(cid);
                         break;
                     case 5:
-                        // Executa o procedimento para mostrar quais cidades estão acicma da média de acidentes
+                        // Executa o procedimento para mostrar qual maior e menor
                         metodos.maiorQueMedia(cid);
                         break;
                     case 9:
