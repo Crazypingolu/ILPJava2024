@@ -4,9 +4,7 @@
  * Programador: LucasP, Crazypingolu
  * versão: 2.0
 */
-
 import javax.swing.JOptionPane;
-
 public class Ex18L1p2 {
     // Código principal:
     public static void main(String[] args) {
