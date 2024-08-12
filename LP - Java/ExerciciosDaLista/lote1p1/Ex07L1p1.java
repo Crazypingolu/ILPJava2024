@@ -5,7 +5,7 @@
 */
 // Trazer bibliotecas:
 import javax.swing.JOptionPane;
-public class Ex07L1p2 {
+public class Ex07L1p1 {
     public static void main(String[] args) {
         // Declarar variáveis:
         float altura, largura, comprimento, total;
